@@ -26,7 +26,7 @@ const GoogleReCaptcha = ({ onMessage, siteKey, style, url, languageCode, cancelB
 	const generateTheWebViewContent = siteKey => {
 		const originalForm =
 			`<!DOCTYPE html>
-			<html>
+			<html style="display: flex; height: 100%;">
 			<head> 
 				<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 				<meta http-equiv="X-UA-Compatible" content="ie=edge"> 
@@ -60,9 +60,9 @@ const GoogleReCaptcha = ({ onMessage, siteKey, style, url, languageCode, cancelB
 					}
 				</style>
 			</head>
-			<body> 
+			<body style="display: flex; flex: 1; justify-content: center; align-items: center;"> 
 				<div id="captcha">
-					<div style="text-align: center; padding-top: 100px;">
+					<div style="text-align: center;">
 					<div class="g-recaptcha" style="display: inline-block; height: auto;" 
 						data-sitekey="${siteKey}" data-callback="onDataCallback"  
 						data-expired-callback="onDataExpiredCallback"  
@@ -89,7 +89,7 @@ const GoogleReCaptcha = ({ onMessage, siteKey, style, url, languageCode, cancelB
 			javaScriptEnabled
 			injectedJavaScript={patchPostMessageJsCode}
 			automaticallyAdjustContentInsets
-			style={[{ backgroundColor: 'transparent', width: '100%' }, style]}
+			style={[{ backgroundColor: 'transparent', width: '100%', }, style]}
 			source={{
 				html: generateTheWebViewContent(siteKey),
 				baseUrl: `${url}`,
