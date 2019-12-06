@@ -46,9 +46,9 @@ class ConfirmGoogleCaptcha extends Component {
 }
 
 const styles = StyleSheet.create({
-    text: { fontSize: 15, fontWeight: 'bold', color: '#fff', textAlign: 'center', marginTop: 10 },
-    modal: { margin: 0 },
-    wrapper: { flex: 1, backgroundColor: 'rgba(0, 0, 0, 0.3)', justifyContent: 'center', overflow: 'hidden' }
+    text: { fontSize: 15, fontWeight: 'bold', color: '#fff', textAlign: 'center'},
+    modal: { margin: 0, },
+    wrapper: { flex: 1, backgroundColor: 'rgba(0, 0, 0, 0.3)', justifyContent: 'center', overflow: 'hidden', }
 });
 ConfirmGoogleCaptcha.propTypes = {
     siteKey: PropTypes.string.isRequired,
